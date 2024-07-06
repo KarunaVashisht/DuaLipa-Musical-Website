@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIGN IN PAGE</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    
+         
+        <style>
+            .container{
+               height: 800px;
+               width: 700px;
+               background-color: #FD349C;
+              }
+          </style>
+    </head>
+        
+    <body>
+<br>
+        <div class="container-fluid"> 
+            <h2 class="text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ37fmaJxUNg3qv2xs8y9tA5bN8kDhddnXITjwxBLyXaoFEA0cmnXYkII4WdTCxWHsifq0&usqp=CAU" 
+            class="rounded-circle " height="60px" width="60px"/> <b><a href="#" style="color: #FD349C; font-family: Brush Script MT ">
+            Dua_Lipa</b></a>
+            </h2>
+        </div>
+        <hr> <br>
+        <div class="container">
+           
+            <h1 class="text-center"> <b>SIGN UP TO START LISTENING</b></h1><hr><br>
+            <form method="post" action="music_back.php">
+
+             <label><b><span class="fa fa-user"></span> &nbsp ENTER YOUR NAME</b></label><br>
+             <input type="text" name="name"  placeholder="enter your name" size="30" required> <br><br>
+
+<label><b><span class="fa fa-phone"></span> &nbsp ENTER YOUR NUMBER</b></label><br>
+             <input type="text"  name="number"  placeholder="enter your number" maxlength="10" minlength="10" size="30"  required> <br><br>
+             
+             <label><b><span class="fa fa-envelope"></span> &nbsp ENTER YOUR EMAIL</b></label><br>
+             <input type="text" name="email"  placeholder="enter your email" size="30"  required> <br><br>
+
+             <label><b><span class="fa fa-lock"></span> &nbsp ENTER YOUR PASSWORD</b></label><br>
+             <input type="password" name="password"  placeholder="enter your password" size="30"  maxlength="4" required> <br><br>
+
+             <label><b><span class="fa fa-calendar"></span> &nbsp ENTER YOUR D.O.B</b></label><br>
+             <input type="date" name="date"  size="30"  required> <br><br>
+
+             <label><b><span class="fa fa-male"></span> <span class="fa fa-female"></span>&nbsp CHOOSE YOUR GENDER</b></label><br>
+             <input type="radio" name="gender" value="male" required>Male &nbsp
+             <input type="radio" name="gender"  value="female" required>Female &nbsp
+             <input type="radio" name="gender" value="other" required>Other <br><br>
+
+             <input type="checkbox" name="agree" required>&nbsp <b>I agree with all the terms and conditions of this website</b><br><br>
+
+             <h4 class="text-center">
+<button type="submit" class="btn btn-lg btn-dark">SIGN UP</button>
+           
+            </form><br>
+    
+        </div> <br><br><br>
+    </body>
+</html>

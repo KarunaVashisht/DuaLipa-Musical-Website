@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Tickets </title>
+
+      <style>
+        
+        .button{
+                
+                background-color: #FD349C;
+                color: white;
+           }
+          
+
+   </style>
+ 
+<script>
+    function listen() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S PLAYLIST PAGE");
+       }
+       function tickets() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S CONCERTS TICKETS BOOKING PAGE");
+       }
+       function about() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S BIO PAGE");
+       }
+       </script>
+</head>
+ 
+<body>
+    <center>
+        <?php       
+        $conn = mysqli_connect("localhost", "root", "", "Ticketbook");
+               
+        if($conn === false){
+            die("ERROR: Could not connect. "
+                . mysqli_connect_error());
+        }
+         
+        $fname = $_REQUEST['fname'];
+        $lname = $_REQUEST['lname'];
+        $email = $_REQUEST['email'];
+        $number = $_REQUEST['number'];
+        $seating= $_REQUEST['seating'];
+        $ticket= $_REQUEST['ticket'];
+        $location = $_REQUEST['location'];
+         
+        
+        $sql = "INSERT INTO book VALUES ('$fname', '$lname',
+        '$email', '$number', '$seating' , '$ticket' , '$location')";
+        
+        
+        if(mysqli_query($conn, $sql)){
+        
+            echo "<h1 style='color: #FD349C;'>"." CONGRATULATIONS"."</h1>"."<h3>"."Your tickets for the concert"." ". $location .
+            " ". "are successfully booked". "<hr>"."<br>"."</h3>". " " ."<h3 style='color: #FF5DD2;'>".
+            "Further details and updates are send to your email :  ".$email. "</h3>".
+             "<h2>". "Details entered by you are :-"."<br>"."<h4>"."Phone No.:-".$number."<br>".
+             "Seating position:-".$seating."<br>". "Number of tickets :-".$ticket."<br>" ."<br>".
+              " In case you want to change the details click below"."</h4>";
+           
+        } else{
+            echo "ERROR: Hush! Sorry $sql. "
+                . mysqli_error($conn);
+        }
+         
+        mysqli_close($conn);
+        ?>
+      
+
+        <a class="button" href="tickets.php" >RE-SUBMIT</a> 
+        <br><br><br><br><br><br>
+        <h2>
+    <a class="button" href="Home.php" >HOME PAGE</a> &nbsp
+    
+    <a class="button" href="playlist.php" onclick="listen()">START LISTENING</a> &nbsp
+    
+    <a class="button" href="about.php" onclick="about()">ABOUT DUA LIPA</a>
+    </h2>
+ </body>
+ </html>

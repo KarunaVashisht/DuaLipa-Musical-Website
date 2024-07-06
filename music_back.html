@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title> Music Database PHP</title>
+
+      <style>
+        *{
+background-color: black;
+        }
+
+        .button{
+                
+                background-color: #FD349C;
+                color: white;
+           }
+
+   </style>
+
+<script>
+    function listen() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S PLAYLIST PAGE");
+       }
+       function tickets() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S CONCERTS TICKETS BOOKING PAGE");
+       }
+       function about() {
+       alert("THIS PAGE WILL REDIRECT YOU TO DUA LIPA'S BIO PAGE");
+       }
+       </script>
+</head>
+ 
+<body>
+    <center>
+        <?php       
+        $conn = mysqli_connect("localhost", "root", "", "Signed");
+               
+        if($conn === false){
+            die("ERROR: Could not connect. "
+                . mysqli_connect_error());
+        }
+         
+        $name = $_REQUEST['name'];
+        $number = $_REQUEST['number'];
+        $email = $_REQUEST['email'];
+        $password = $_REQUEST['password'];
+        $date= $_REQUEST['date'];
+        $gender = $_REQUEST['gender'];
+         
+        
+        $sql = "INSERT INTO sign_in VALUES ('$name', '$number',
+        '$email', '$password', '$date', '$gender')";
+         
+        if(mysqli_query($conn, $sql)){
+        
+            echo "<h1 style='color: #FD349C;' >"." WELCOME"." ".$name ."!". "<hr>"."</h1>". " " ."<h2 style='color: #FF5DD2;'>".
+            "**You have successfully signed in to Dua Lipa's official website ** ". "</h2>".
+             "<br> <br> <br>" ."<h2 style='color: #FF5DD2;'>". "Now you can easily listen to all the latest music of Dua Lipa , book your concert tickets ,
+              get latest updates and many more things at a single place .";
+           
+        } else{
+            echo "ERROR: Hush! Sorry $sql. "
+                . mysqli_error($conn);
+        }
+         
+        mysqli_close($conn);
+        ?>
+        <br> <br> <br> <hr><br><br>
+    
+    <a class="button" href="Home.php" onclick="listen()">HOME</a> &nbsp
+    <a class="button" href="tickets.php" onclick="tickets()">BOOK TICKETS</a>  &nbsp 
+    <a class="button" href="playlist.php" onclick="tickets()">PLAYLIST </a>  &nbsp 
+    <a class="button" href="Home.php" onclick="about()">ABOUT DUA LIPA</a>
+ </body>
+ </html>

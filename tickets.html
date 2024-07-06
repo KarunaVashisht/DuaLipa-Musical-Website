@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ticket Booking </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+<style>
+.navbar
+{
+    background-color: #FD349C ;
+}
+.container-fluid
+{
+    background-color: black ;
+}
+
+
+.container{
+               height: 750px;
+               width: 500px;
+               background-color: #FD349C;
+              }
+
+</style>
+
+<script>
+function mouseOver(obj) {
+  obj.innerHTML = "GET YOUR TICKETS NOW "
+}
+
+function mouseOut(obj) {
+  obj.innerHTML = "FILL THE FORM"
+}
+</script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+<nav class="navbar navbar-expand-sm fixed-top">
+ 
+  <a class="navbar-brand">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ37fmaJxUNg3qv2xs8y9tA5bN8kDhddnXITjwxBLyXaoFEA0cmnXYkII4WdTCxWHsifq0&usqp=CAU" 
+            class="rounded-circle " height="40px" width="40px"/> <b><a href="#" style= "color: black; font-family: Brush Script MT ;">
+            Dua_Lipa</b></a>
+  </a>
+ &nbsp 
+<ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="home.html"><h6 style="color: white;"><span class="fa fa-home"></span>HOME</h6></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tickets.html"><h6 style="color: white;"> <span class="fa fa-map"></span>TICKETS</h6></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html"><h6 style="color: white;"><span class="fa fa-info"></span>ABOUT</h6></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="playlist.html"><h6 style="color: white;"><span class="fa fa-music"></span>PLAYLIST</h6></a>
+    </li>
+  </ul>
+</nav>
+<br><br>
+
+<div class="row"> 
+<div class="col-sm-3" style="background-color: black;"><img src="https://c4.wallpaperflare.com/wallpaper/335/744/993/dua-lipa-music-celebrities-girls-wallpaper-preview.jpg" height="450px" width="350px">   </div>
+<div class="col-sm-3" style="background-color: black;"><img src=" https://c4.wallpaperflare.com/wallpaper/1019/601/126/celebrity-women-dua-lipa-singer-model-hd-wallpaper-preview.jpg" height="450px" width="350px">   </div>
+<div class="col-sm-3" style="background-color: black;"><img src="https://c4.wallpaperflare.com/wallpaper/1010/964/32/dua-lipa-music-celebrities-girls-wallpaper-preview.jpg" height="450px" width="350px">   </div>
+<div class="col-sm-3" style="background-color: black;"><img src="https://c4.wallpaperflare.com/wallpaper/504/498/437/celebrity-women-dua-lipa-singer-model-hd-wallpaper-preview.jpg" height="450px" width="350px">   </div>
+</div>
+<br> <br> <hr> <br> <br>
+<h2 class="text-center" style="color: #FD349C; font-family: Brush Script MT ;"> <b>BOOK YOUR CONCERT TICKETS NOW!!<b> </h2><br>
+
+<h2 class="text-center" style="color: #FD349C; " onmouseover="mouseOver(this)" onmouseout="mouseOut(this)"> <b> FILL THE FORM </b> </h2><br>
+
+
+
+<div class="container">
+<form method="post" action="TicketBook.html">
+
+<label><b> &nbsp * ENTER YOUR FIRST NAME</b></label><br>
+            <input type="text" name="fname"  placeholder="enter your first name" size="30" required> <br><br>
+            
+            <label><b> &nbsp * ENTER YOUR LAST NAME</b></label><br>
+            <input type="text" name="lname"  placeholder="enter your last name" size="30"> <br><br>
+
+            <label><b> &nbsp * ENTER YOUR EMAIL</b></label><br>
+            <input type="text" name="email"  placeholder="enter your email" size="30" required> <br><br>
+
+            <label><b> &nbsp * ENTER YOUR PHONE NUMBER</b></label><br>
+            <input type="text" name="number"  placeholder="enter your name" size="30" required> <br><br>
+
+            <label><b>&nbsp * SEATING OPTIONS :</b></label><br>
+             <input type="radio" name="seating" value="front" required>Front Stage &nbsp
+             <input type="radio" name="seating"  value="middle" required>Middle &nbsp
+             <input type="radio" name="seating" value="balcony" required>Balcony &nbsp
+             <input type="radio" name="seating" value="other" required>Other<br><br>
+
+             <label><b> &nbsp * NUMBER OF TICKETS</b></label><br>
+            <input type="number" name="ticket" required> <br><br>
+
+            <label for="location">CHOOSE YOUR LOCATION:</label>
+  <select id="location" name="location">
+  <option value="empty"> NONE</option>
+    <option value="Bell Center Montreal Canada">Bell Center Montreal Canada </option>
+    <option value="Scotiabank Arena Toronto Canada">Scotiabank Arena Toronto Canada </option>
+    <option value="Lollapallzo Festival 2022 Machine Gun kelly">Lollapallzo Festival 2022 Machine Gun kelly </option>
+    <option value="Dua Lipa & Glass Animals Gun kelly Osheaga">Dua Lipa & Glass Animals Gun kelly Osheaga</option>
+    <option value="Dua Lipa and Megan Rock in Rio Brazil">Dua Lipa and Megan Rock in Rio Brazil  </option>
+    <option value="Dua Lipa Campo De Polo buenos aires Argentina">Dua Lipa Campo De Polo buenos aires Argentina  </option>
+    <option value="Halsey and Dua Lipa Dover  De USA ">Halsey and Dua Lipa Dover  De USA </option>
+    <option value="RAC Arena Perth Australia ">RAC Arena Perth Australia </option>
+    <option value="Dua Lipa Spark Arena Auckland New Zealand">Dua Lipa Spark Arena Auckland New Zealand </option>
+  </select><br><br>
+
+  <h4 class="text-center">
+<button type="submit" class="btn btn-lg btn-dark">BOOK TICKETS</button>
+</form>
+</div>
+<br><br>
+<<center>
+<a href="https://www.facebook.com/dualipa/"> <i class="fa fa-facebook" style="color:blue;"></i></a> &nbsp &nbsp
+            <a href="https://www.instagram.com/dualipa/"><i class="fa fa-instagram" style="color:blue;"></i></a>&nbsp &nbsp
+            <a href="https://www.youtube.com/channel/UC-J-KZfRV8c13fOCkhXdLiQ"><i class="fa fa-youtube" style="color:blue;"></i></a>&nbsp &nbsp
+            <a href="https://en.wikipedia.org/wiki/Dua_Lipa"><i class="fa fa-google" style="color:blue;"></i></a>&nbsp &nbsp
+            <a href="https://www.snapchat.com/add/duasnaps"><i class="fa fa-snapchat-ghost" style="color:blue;"></i></a>
+            </center>
+           <br>
+           <p class="text-right" style="color: white; font-family: Brush Script MT; font-size: 18px;">&copy; Dua Lipa.com</p> <br>
+            </div> 
+
+</div>           
+</body>
+</html>
